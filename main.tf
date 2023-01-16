@@ -14,7 +14,8 @@ resource "azurerm_resource_group" "rg" {
     InfrastructureAsCode = "True"
   }
 }
-
+# commenting the AD group creation and IAM permissions allocation code
+/*
 resource "azuread_group" "reader" {
   name = format("g%s%s%s_AZ_Reader", local.default_rgid, local.env_id, local.rg_type)
 }
@@ -24,4 +25,4 @@ resource "azurerm_role_assignment" "reader" {
   role_definition_name = "Reader"
   principal_id         = azuread_group.reader.id
 }
-
+*/
